@@ -1,18 +1,15 @@
-import basicConfig from './rollup.config'
-import excludeDependenciesFromBundle from "rollup-plugin-exclude-dependencies-from-bundle"
+import basicConfig from './rollup.config';
+import excludeDependenciesFromBundle from 'rollup-plugin-exclude-dependencies-from-bundle';
 
 const config = {
   ...basicConfig,
   output: [
     {
       file: 'dist/index.es.js',
-      format: 'es'
-    }
+      format: 'es',
+    },
   ],
-  plugins: [
-    ...basicConfig.plugins,
-    excludeDependenciesFromBundle(),
-  ]
-}
+  plugins: [...basicConfig.plugins, excludeDependenciesFromBundle()],
+};
 
-export default config
+export default config;
