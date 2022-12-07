@@ -1,28 +1,27 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
+import Alert from "./alert";
 
-import Alert from './alert'
-
-export default { 
-  title: '第四章作业：Alert 组件',
-  id: 'Alert',
+export default {
+  title: "Alert 组件",
+  id: "Alert",
   component: Alert,
-} as ComponentMeta<typeof Alert>
+} as ComponentMeta<typeof Alert>;
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
+const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />;
 
-export const ADefaultAlert = Template.bind({})
+export const ADefaultAlert = Template.bind({});
 ADefaultAlert.args = {
-  title: 'this is alert!'
-}
-ADefaultAlert.storyName = '基本样式'
-export const CDescAlert = Template.bind({})
+  title: "this is alert!",
+};
+ADefaultAlert.storyName = "基本样式";
+export const CDescAlert = Template.bind({});
 CDescAlert.args = {
-  title: '提示标题欧亲',
-  description: 'this is a long description'
-}
-CDescAlert.storyName = '带描述的 Alert'
+  title: "提示标题欧亲",
+  description: "this is a long description",
+};
+CDescAlert.storyName = "带描述的 Alert";
 export const BStylesAlert = () => {
   return (
     <>
@@ -30,6 +29,6 @@ export const BStylesAlert = () => {
       <Alert title="this is Danger!" type="danger"></Alert>
       <Alert title="this is Warning!" type="warning" closable={false}></Alert>
     </>
-  )
-}
-BStylesAlert.storyName = '不同样式的 Alert'
+  );
+};
+BStylesAlert.storyName = "不同样式的 Alert";
