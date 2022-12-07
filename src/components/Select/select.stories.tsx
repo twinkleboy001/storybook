@@ -1,15 +1,15 @@
-import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import React from 'react';
+import { ComponentMeta } from '@storybook/react';
 
-import Select from "./index";
+import Select from './index';
 export default {
-  title: "Select",
+  title: 'Select',
   component: Select,
-  id: "Select",
+  id: 'Select',
   subcomponents: { Option: Select.Option },
   decorators: [
     (Story) => (
-      <div style={{ width: "350px" }}>
+      <div style={{ width: '350px' }}>
         <Story />
       </div>
     ),
@@ -25,7 +25,7 @@ export const ADefaultSelect = (args) => (
     <Select.Option value="nihao5" />
   </Select>
 );
-ADefaultSelect.storyName = "默认的Select";
+ADefaultSelect.storyName = '默认的Select';
 export const BMultipleSelect = (args) => (
   <Select {...args} placeholder="支持多选欧！" multiple>
     <Select.Option value="nihao" />
@@ -35,7 +35,7 @@ export const BMultipleSelect = (args) => (
     <Select.Option value="viking2" />
   </Select>
 );
-BMultipleSelect.storyName = "支持多选的 Select";
+BMultipleSelect.storyName = '支持多选的 Select';
 export const CDisabledSelect = (args) => (
   <Select {...args} placeholder="禁用啦！" disabled>
     <Select.Option value="nihao" />
@@ -43,4 +43,4 @@ export const CDisabledSelect = (args) => (
     <Select.Option value="nihao3" />
   </Select>
 );
-CDisabledSelect.storyName = "被禁用的 Select";
+CDisabledSelect.storyName = '被禁用的 Select';

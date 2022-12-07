@@ -1,6 +1,6 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AutoComplete, DataSourceType } from "./autoComplete";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { AutoComplete, DataSourceType } from './autoComplete';
 interface LakerPlayerProps {
   value: string;
   number: number;
@@ -11,13 +11,13 @@ interface GithubUserProps {
   avatar_url: string;
 }
 export default {
-  title: "AutoComplete",
+  title: 'AutoComplete',
   component: AutoComplete,
-  id: "AutoComplete",
+  id: 'AutoComplete',
   parameters: {
     docs: {
       source: {
-        type: "code",
+        type: 'code',
       },
     },
   },
@@ -37,18 +37,18 @@ export default {
 // }
 export const ASimpleComplete: ComponentStory<typeof AutoComplete> = (args) => {
   const lakers = [
-    "bradley",
-    "pope",
-    "caruso",
-    "cook",
-    "cousins",
-    "james",
-    "AD",
-    "green",
-    "howard",
-    "kuzma",
-    "McGee",
-    "rando",
+    'bradley',
+    'pope',
+    'caruso',
+    'cook',
+    'cousins',
+    'james',
+    'AD',
+    'green',
+    'howard',
+    'kuzma',
+    'McGee',
+    'rando',
   ];
   const handleFetch = (query: string) => {
     return lakers
@@ -63,20 +63,20 @@ export const ASimpleComplete: ComponentStory<typeof AutoComplete> = (args) => {
     />
   );
 };
-ASimpleComplete.storyName = "1 基本的搜索";
+ASimpleComplete.storyName = '1 基本的搜索';
 
 export const BCustomComplete = (args) => {
   const lakersWithNumber = [
-    { value: "bradley", number: 11 },
-    { value: "pope", number: 1 },
-    { value: "caruso", number: 4 },
-    { value: "cook", number: 2 },
-    { value: "cousins", number: 15 },
-    { value: "james", number: 23 },
-    { value: "AD", number: 3 },
-    { value: "green", number: 14 },
-    { value: "howard", number: 39 },
-    { value: "kuzma", number: 0 },
+    { value: 'bradley', number: 11 },
+    { value: 'pope', number: 1 },
+    { value: 'caruso', number: 4 },
+    { value: 'cook', number: 2 },
+    { value: 'cousins', number: 15 },
+    { value: 'james', number: 23 },
+    { value: 'AD', number: 3 },
+    { value: 'green', number: 14 },
+    { value: 'howard', number: 39 },
+    { value: 'kuzma', number: 0 },
   ];
   const handleFetch = (query: string) => {
     return lakersWithNumber.filter((player) => player.value.includes(query));
@@ -99,7 +99,7 @@ export const BCustomComplete = (args) => {
     />
   );
 };
-BCustomComplete.storyName = "2 自定义搜索结果模版";
+BCustomComplete.storyName = '2 自定义搜索结果模版';
 
 export const CAjaxComplete = (args) => {
   const handleFetch = (query: string) => {
@@ -130,7 +130,7 @@ export const CAjaxComplete = (args) => {
     />
   );
 };
-CAjaxComplete.storyName = "3 支持异步搜索";
+CAjaxComplete.storyName = '3 支持异步搜索';
 
 // storiesOf('第九章：AutoComplete', module)
 //   .add('AutoComplete', simpleComplete, {info: {source: false, text: textComplete}})

@@ -1,13 +1,13 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Input } from "./input";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Input } from './input';
 export default {
-  title: "Input",
-  id: "Input",
+  title: 'Input',
+  id: 'Input',
   component: Input,
   decorators: [
     (Story) => (
-      <div style={{ width: "350px" }}>
+      <div style={{ width: '350px' }}>
         <Story />
       </div>
     ),
@@ -17,22 +17,22 @@ export default {
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 export const ADefault = Template.bind({});
 ADefault.args = {
-  placeholder: "漂亮的 Input",
+  placeholder: '漂亮的 Input',
 };
-ADefault.storyName = "默认的 Input";
+ADefault.storyName = '默认的 Input';
 export const BDisabled = Template.bind({});
 BDisabled.args = {
-  placeholder: "disabled input",
+  placeholder: 'disabled input',
   disabled: true,
 };
-BDisabled.storyName = "被禁用的 Input";
+BDisabled.storyName = '被禁用的 Input';
 
 export const CIcon = Template.bind({});
 CIcon.args = {
-  placeholder: "input with icon",
-  icon: "search",
+  placeholder: 'input with icon',
+  icon: 'search',
 };
-CIcon.storyName = "带图标的 Input";
+CIcon.storyName = '带图标的 Input';
 
 export const DSizeInput = () => (
   <>
@@ -40,7 +40,7 @@ export const DSizeInput = () => (
     <Input placeholder="small size" size="sm" />
   </>
 );
-DSizeInput.storyName = "大小不同的 Input";
+DSizeInput.storyName = '大小不同的 Input';
 export const EPandInput = () => (
   <>
     <Input defaultValue="prepend text" prepend="https://" />
@@ -48,4 +48,4 @@ export const EPandInput = () => (
   </>
 );
 
-EPandInput.storyName = "带前后缀的 Input";
+EPandInput.storyName = '带前后缀的 Input';
