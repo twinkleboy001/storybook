@@ -56,7 +56,8 @@
     "build-es": "rollup --config rollup/rollup.esm.config.js",
     "build-umd": "rollup --config rollup/rollup.umd.config.js",
     "prepare": "husky install",
-    "precommit": "npx lint-staged && npm run test:nowatch && npm run lint"
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "precommit": "npm run prettier && npm run test:nowatch && npm run lint"
   },
   "eslintConfig": {
     "extends": [
