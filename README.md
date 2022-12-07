@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/vikingmute/vikingship.svg?token=mHoDqxyxXWX5BSpu8L9y&branch=master)](https://travis-ci.com/vikingmute/vikingship)
 
-vikingship 是 Web 前端组件库，使用 React Hooks 和 typescript  
+vikingship 是 Web 前端组件库，使用 React Hooks 和 typescript 开发  
 意在提高前端开发效率，它的官网地址是
 [vikingship.xyz](http://vikingship.xyz)
 
