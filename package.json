@@ -29,10 +29,13 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@storybook/addon-viewport": "^6.5.14",
     "async-validator": "^4.1.1",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
+    "react-content-loader": "^6.2.0",
     "react-transition-group": "^4.3.0"
   },
   "peerDependencies": {
