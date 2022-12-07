@@ -1,11 +1,11 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Alert from "./alert";
+import Alert from './alert';
 
 export default {
-  title: "Alert 组件",
-  id: "Alert",
+  title: 'Alert 组件',
+  id: 'Alert',
   component: Alert,
 } as ComponentMeta<typeof Alert>;
 
@@ -13,15 +13,15 @@ const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />;
 
 export const ADefaultAlert = Template.bind({});
 ADefaultAlert.args = {
-  title: "this is alert!",
+  title: 'this is alert!',
 };
-ADefaultAlert.storyName = "基本样式";
+ADefaultAlert.storyName = '基本样式';
 export const CDescAlert = Template.bind({});
 CDescAlert.args = {
-  title: "提示标题欧亲",
-  description: "this is a long description",
+  title: '提示标题欧亲',
+  description: 'this is a long description',
 };
-CDescAlert.storyName = "带描述的 Alert";
+CDescAlert.storyName = '带描述的 Alert';
 export const BStylesAlert = () => {
   return (
     <>
@@ -31,4 +31,4 @@ export const BStylesAlert = () => {
     </>
   );
 };
-BStylesAlert.storyName = "不同样式的 Alert";
+BStylesAlert.storyName = '不同样式的 Alert';
