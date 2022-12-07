@@ -14,10 +14,10 @@
     "UI",
     "React"
   ],
-  "homepage": "http://vikingship.xyz",
+  "homepage": "http://online.devin.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vikingmute/vikingship"
+    "url": "https://github.com/zhouhaopkup/storybook"
   },
   "files": [
     "dist"
