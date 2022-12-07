@@ -57,7 +57,8 @@
     "build-umd": "rollup --config rollup/rollup.umd.config.js",
     "prepare": "husky install",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "precommit": "npm run prettier && npm run test:nowatch && npm run lint"
+    "precommit": "npm run prettier && npm run test:nowatch && npm run lint",
+    "chromatic": "npx chromatic --project-token=7ad799319af6 --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": [
@@ -110,6 +111,7 @@
     "@types/react-dom": "18.0.3",
     "@types/react-transition-group": "^4.2.3",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.11.4",
     "cross-env": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.2",
