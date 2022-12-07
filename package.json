@@ -132,6 +132,6 @@
     "webpack": "^5.72.0"
   },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx}": "prettier --write ."
+    "*.{js,css,md,ts,tsx}": "prettier --write --ignore-unknown"
   }
 }
