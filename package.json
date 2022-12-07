@@ -54,15 +54,14 @@
     "storybook": "BROWSER=none start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-es": "rollup --config rollup/rollup.esm.config.js",
-    "build-umd": "rollup --config rollup/rollup.umd.config.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:nowatch && npm run lint"
-    }
+    "build-umd": "rollup --config rollup/rollup.umd.config.js",
+    "prepare": "husky install"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier"
+    ]
   },
   "jest": {
     "transformIgnorePatterns": [
@@ -110,7 +109,9 @@
     "@types/react-transition-group": "^4.2.3",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.0",
-    "husky": "^4.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "node-sass": "^6.0.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.6.0",
@@ -128,5 +129,8 @@
     "sass-loader": "^12.6.0",
     "typescript": "^4.6.4",
     "webpack": "^5.72.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,tsx}": "prettier --write"
   }
 }
