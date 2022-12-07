@@ -55,7 +55,8 @@
     "build-storybook": "build-storybook",
     "build-es": "rollup --config rollup/rollup.esm.config.js",
     "build-umd": "rollup --config rollup/rollup.umd.config.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "npx lint-staged && npm run test:nowatch && npm run lint"
   },
   "eslintConfig": {
     "extends": [
@@ -130,12 +131,7 @@
     "typescript": "^4.6.4",
     "webpack": "^5.72.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx}": "prettier --write"
+    "*.{js,css,md,ts,tsx}": "prettier --write ."
   }
 }
