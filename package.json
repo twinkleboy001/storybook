@@ -42,7 +42,6 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "build": "npm run clean && npm run build-es && npm run build-umd",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
@@ -114,6 +113,7 @@
     "node-sass": "^6.0.1",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.6.0",
+    "prettier": "2.8.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
