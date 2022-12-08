@@ -1,0 +1,48 @@
+@function margin-length($size) {
+  @if $size == 'small' {
+    @return rem(8px);
+  } @else if $size == 'middle' {
+    @return rem(16px);
+  } @else if $size == 'large' {
+    @return rem(24px);
+  }
+}
+@mixin space-margin($size, $type) {
+  &.space-#{$size} {
+    > div:not(:first-child) {
+      margin-#{$type}: margin-length($size);
+    }
+  }
+}
+@mixin first-no-margin {
+  > div:nth-child(1) {
+    margin: 0 !important;
+  }
+}
+.space-horizontal {
+  display: flex;
+  @include first-no-margin;
+  @include space-margin('small', 'left');
+  @include space-margin('middle', 'left');
+  @include space-margin('large', 'left');
+}
+.space-vertical {
+  display: flex;
+  flex-direction: column;
+  @include first-no-margin;
+  @include space-margin('small', 'top');
+  @include space-margin('middle', 'top');
+  @include space-margin('large', 'top');
+}
+.space-start {
+  align-items: flex-start;
+}
+.space-end {
+  align-items: flex-end;
+}
+.space-center {
+  align-items: center;
+}
+.space-baseline {
+  align-items: baseline;
+}

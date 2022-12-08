@@ -1,8 +1,8 @@
 {
-  "name": "vikingship",
-  "version": "1.0.4",
+  "name": "storybook-web-uikit",
+  "version": "1.0.0",
   "description": "React components library",
-  "author": "Devin Zhou",
+  "author": "Devin",
   "private": false,
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
@@ -29,11 +29,15 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@storybook/addon-viewport": "^6.5.14",
     "async-validator": "^4.1.1",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "react-transition-group": "^4.3.0"
+    "react-content-loader": "^6.2.0",
+    "react-transition-group": "^4.3.0",
+    "storybook-addon-designs": "^6.3.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -57,7 +61,8 @@
     "build-umd": "rollup --config rollup/rollup.umd.config.js",
     "prepare": "husky install",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "precommit": "npm run prettier && npm run test:nowatch && npm run lint"
+    "precommit": "npm run prettier && npm run test:nowatch && npm run lint",
+    "chromatic": "npx chromatic --project-token=7ad799319af6 --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": [
@@ -110,6 +115,7 @@
     "@types/react-dom": "18.0.3",
     "@types/react-transition-group": "^4.2.3",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.11.4",
     "cross-env": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.2",
