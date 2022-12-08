@@ -1,17 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-//import WelcomeMDX from '../Welcome/Welcome.stories.mdx'
 import Button from './button';
 
-// https://github.com/storybookjs/storybook/issues/15574
 export default {
   title: 'Button',
   component: Button,
-  // parameters: {
-  //   docs: {
-  //     page: WelcomeMDX
-  //   }
-  // }
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
