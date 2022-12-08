@@ -1,8 +1,8 @@
 {
-  "name": "vikingship",
-  "version": "1.0.4",
+  "name": "storybook-web-uikit",
+  "version": "1.0.0",
   "description": "React components library",
-  "author": "Devin Zhou",
+  "author": "Devin",
   "private": false,
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
